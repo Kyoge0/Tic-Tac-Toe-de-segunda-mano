@@ -1,0 +1,107 @@
+/* General */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #181818;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+/* Estructura principal */
+#container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    justify-content: space-between;
+}
+
+/* Panel izquierdo - Tablero */
+#left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tablero del juego */
+#game-area {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 10px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+.cell.active {
+    pointer-events: none;
+}
+
+/* Panel derecho - Highscores */
+#right-panel {
+    flex: 0.4;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+#right-panel h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+#leaderboard {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+#leaderboard li {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Información del juego */
+#game-info {
+    margin-top: 20px;
+}
+
+#game-info p {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
+#timer {
+    color: #00ff00;
+}
